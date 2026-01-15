@@ -1,0 +1,87 @@
+Step 1:
+1. Create Project Folder With any name
+2. PS C:\Main\Classwork\CSC 161 Projects\First-In-Lab-Code-Demo> cd Unit_1
+3. PS C:\Main\Classwork\CSC 161 Projects\First-In-Lab-Code-Demo\Unit_1> py -m venv .venv
+
+Step 2:
+C:\Main\Classwork\CSC 161 Projects\First-In-Lab-Code-Demo\Unit_1> .\.venv\Scripts\activate
+
+if PS C:\Main\Classwork\CSC 161 Projects\First-In-Lab-Code-Demo\Unit_1> .\.venv\Scripts\activate does not work
+Then do
+PS C:\Main\Classwork\CSC 161 Projects\First-In-Lab-Code-Demo\Unit_1> Set-ExecutionPolicy Unrestricted -Scope Process
+PS C:\Main\Classwork\CSC 161 Projects\First-In-Lab-Code-Demo\Unit_1> .\.venv\Scripts\activate
+
+Should get:
+(.venv) PS C:\Main\Classwork\CSC 161 Projects\First-In-Lab-Code-Demo\Unit_1> 
+
+Step 3:
+(.venv) PS C:\Main\Classwork\CSC 161 Projects\First-In-Lab-Code-Demo\Unit_1> py -m pip install django
+Collecting django
+  Downloading django-6.0.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting asgiref>=3.9.1 (from django)
+  Downloading asgiref-3.11.0-py3-none-any.whl.metadata (9.3 kB)
+Collecting sqlparse>=0.5.0 (from django)
+  Downloading sqlparse-0.5.5-py3-none-any.whl.metadata (4.7 kB)
+Collecting tzdata (from django)
+  Downloading tzdata-2025.3-py2.py3-none-any.whl.metadata (1.4 kB)
+Downloading django-6.0.1-py3-none-any.whl (8.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 669.2 kB/s  0:00:12
+Downloading asgiref-3.11.0-py3-none-any.whl (24 kB)
+Downloading sqlparse-0.5.5-py3-none-any.whl (46 kB)
+Downloading tzdata-2025.3-py2.py3-none-any.whl (348 kB)
+Installing collected packages: tzdata, sqlparse, asgiref, django
+Successfully installed asgiref-3.11.0 django-6.0.1 sqlparse-0.5.5 tzdata-2025.3                                                                                
+(.venv) PS C:\Main\Classwork\CSC 161 Projects\First-In-Lab-Code-Demo\Unit_1> django-admin startproject mysite 
+Should get:
+should get a folder call mysite
+
+Step 4:
+(.venv) PS C:\Main\Classwork\CSC 161 Projects\First-In-Lab-Code-Demo\Unit_1> cd mysite
+then:
+(.venv) PS C:\Main\Classwork\CSC 161 Projects\First-In-Lab-Code-Demo\Unit_1\mysite> py manage.py migrate
+Shoudl get: 
+
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+(.venv) PS C:\Main\Classwork\CSC 161 Projects\First-In-Lab-Code-Demo\Unit_1\mysite> 
+
+Step 5:
+(.venv) PS C:\Main\Classwork\CSC 161 Projects\First-In-Lab-Code-Demo\Unit_1\mysite> py manage.py runserver
+then click on:
+Starting development server at http://127.0.0.1:8000/
+Should see: website
+
+Then Crtl + c: to stop the website
+Should get: (.venv) PS C:\Main\Classwork\CSC 161 Projects\First-In-Lab-Code-Demo\Unit_1\mysite> 
+
+Step 6:
+(.venv) PS C:\Main\Classwork\CSC 161 Projects\First-In-Lab-Code-Demo\Unit_1\mysite> py manage.py startapp blog // to create a app "blog is the name of the folder/app"
+
+Should get:
+folder called blog with app files and folders
+
+Step 7:
+then click on the verstion number in the bottom 3.14.## next to the bell icon people icon and UTF-8
+then press find interpertier
+then go into unit 1, venv folder, scripts
+then click on python.exe
+Erros should disappear on models.py
